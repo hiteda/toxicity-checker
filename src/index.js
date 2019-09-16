@@ -11,11 +11,11 @@ import * as serviceWorker from './serviceWorker';
 const routing = (
     <Router>
         <div>
-            <header class="navbar nav-fixed-top bg-dark">
-                <div class="container">
+            <header className="navbar nav-fixed-top bg-dark">
+                <div className="container">
                 <Link to="/" id="logo">Toxicity Checker</Link>
                     <nav>
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul className="nav navbar-nav navbar-right">
                             <li>
                                 <Link to="/">Home</Link>
                             </li>
@@ -28,7 +28,6 @@ const routing = (
             </header>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route path="/check/:item" component={App} />
                 <Route path="/about" component={About} />
                 <Route component={Notfound} />
             </Switch>

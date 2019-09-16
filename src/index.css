@@ -1,40 +1,72 @@
+:root {
+  font-size: 62.5%
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: papyrus;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-  width: 1170px
+  width: 1170px;
+}
+
+.center {
+  text-align: center;
+}
+
+.form-control {
+  width: 200px;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 2.0rem;
+  border-radius: 0.3rem;
+  vertical-align: middle;
+}
+
+.btn {
+  font-size: 2.0rem;
 }
 
 ul.navbar-nav {
   flex-direction: row;
   flex-wrap: wrap;
-  padding-left: 10px
 }
 
-li.navbar-nav {
+li {
   display: inline-block;
-  padding-block-start: 10px
-}
-/*
-nav.navbar {
-  background-color: blue;
+  margin-left: 1.5rem;
+  font-family: papyrus;
 }
 
 a {
-  color: #ffffff
+  color: #ffffffb4;
+  text-decoration: none;
+  font-size: 2.25rem;
 }
 
 a:hover {
-  color: #a2a2a3
+  text-decoration: none;
+  color: #ffffff
 }
 
-ul.navbar-nav {
-  align-content: right;
+p {
+  font-family: helvetica;
+  font-size: 2.2rem;
 }
-*/
+
+h1 {
+  font-size: 5.2rem;
+}
+
+#logo {
+  font-family: papyrus;
+  font-size: 2.5rem;
+  color: white;
+}
+
+#logo:hover {
+  color: #ffffffb4;
+}
