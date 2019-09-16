@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import App from './App';
@@ -10,17 +11,23 @@ import * as serviceWorker from './serviceWorker';
 const routing = (
     <Router>
         <div>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="about">About</Link>
-                </li>
-            </ul>
+            <header className="navbar nav-fixed-top bg-dark">
+                <div className="container">
+                <Link to="/" id="logo">Toxicity Checker</Link>
+                    <nav>
+                        <ul className="nav navbar-nav navbar-right">
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="about">About</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route path="/check/:item" component={App} />
                 <Route path="/about" component={About} />
                 <Route component={Notfound} />
             </Switch>
