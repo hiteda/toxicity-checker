@@ -1,4 +1,5 @@
 import React from 'react';
+import Results from './Results.js';
 import './App.css';
 import './index.css'
 import queryString from 'query-string'
@@ -6,7 +7,7 @@ import queryString from 'query-string'
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {itemValue: false};
+    this.state = {itemValue: props.itemValue};
   }
 
   componentDidMount() {
@@ -23,11 +24,11 @@ class App extends React.Component {
             <h1>The Internet's "Official" Toxicity Checker</h1>
             <p id="home-desc">Enter a person, place, or thing, and I will arbitrarily assign a toxicity rating to it!</p>
             <form method="get" action="/">
-              <input type="text" placeholder="Carrots" name="item" className="form-control"/>
+              <input type="text" placeholder="Gasoline" name="item" className="form-control"/>
               <input type="submit" value="Check Toxicity!" className="btn btn-lg btn-primary"/>
             </form>
           </div>
-          { itemValue != "" && <p>{itemValue}</p> }
+          { itemValue && itemValue !== "" && <Results item={itemValue}/> }
         </div>
       );
   }
