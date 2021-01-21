@@ -5,10 +5,17 @@ class Results extends React.Component {
     constructor(props) {
         super(props);
         console.log("Props: ",props)
-        this.state = {item: props.item};
+        this.state = {item: null};
+    }
+
+    setValue(value) {
+        this.setState({item: value});
     }
 
     render() {
+        if (this.state.item == null) {
+            return null;
+        }
         const itemValue = this.state.item.trim();
         const itemLower = itemValue.toLowerCase();
         let itemHash = 0;
