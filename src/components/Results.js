@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import '../index.css';
 
 class Results extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class Results extends React.Component {
     }
 
     render() {
-        if (this.state.item == null) {
+        if (this.state.item == null || this.state.item === "") {
             return null;
         }
         const itemValue = this.state.item.trim();

@@ -1,5 +1,5 @@
 import React from 'react';
-import Results from './Results.js';
+import Results from './components/Results.js';
 import './App.css';
 import './index.css'
 
