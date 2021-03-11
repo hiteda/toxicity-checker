@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import Results from './components/Results.js';
 import './App.css';
 import './index.css'
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.input = React.createRef();
-    this.resultsElement = React.createRef();
+    this.input = createRef();
+    this.state = { input: "" };
   }
 
   render() {
@@ -22,15 +22,14 @@ class App extends React.Component {
               <input type="submit" value="Check Toxicity!" className="btn btn-lg btn-primary"/>
             </form>
           </div>
-          <Results ref={this.resultsElement}/>
+          <Results item={this.state.input} />
         </div>
       );
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.input.current.value);
-    this.resultsElement.current.setValue(this.input.current.value);
+    this.setState({ input: this.input.current.value });
   }
 }
 
